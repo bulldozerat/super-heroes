@@ -9,11 +9,18 @@ const HeroWrapper = styled.div`
     display: flex;
     background: #f4f6f9;
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 30px;
     img {
         width: 350px;
         max-height: 465px;
     }
+`;
+
+const StatsWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 20px;
 `;
 
 let Hero = inject("heroStore")(observer((props) => {
@@ -26,7 +33,13 @@ let Hero = inject("heroStore")(observer((props) => {
                             <Title text={e.name} position="center"/>
                             <HeroWrapper>
                                 <HeroImage image={e.image.url}/>
-                                <HeroStats powerstats={e.powerstats}/>
+                                <StatsWrapper>
+                                {
+                                    Object.keys(e.powerstats).map(function(key) {
+                                        return <HeroStats nameOfPowerStat={key} value={e.powerstats[key]}/>
+                                    })
+                                }
+                                </StatsWrapper>
                             </HeroWrapper>
                         </div>
                     )
