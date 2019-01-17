@@ -2,7 +2,7 @@ import React from "react";
 import { inject, observer } from 'mobx-react';
 import styled from 'styled-components';
 
-let getColor: any = (namePower: string) => {
+let getColor = (namePower: string): string => {
     if(namePower === "intelligence"){
         return "#3874d8";
     }else if(namePower === "strength"){
@@ -24,6 +24,7 @@ let HeroStats = inject("heroStore")(observer((props) => {
 
     const HeroWrapper = styled.div`
         display: block;
+        font-size: 12px;
         width: ${props.value}%;
         height: 40px;
         line-height: 38px;
@@ -36,7 +37,9 @@ let HeroStats = inject("heroStore")(observer((props) => {
     `;
 
     return (
-        <HeroWrapper>{props.nameOfPowerStat}: {props.value}</HeroWrapper>
+        <div style={{width: '100%'}}>
+            <HeroWrapper>{props.nameOfPowerStat}: {props.value === "null" ? "unknown" : props.value}</HeroWrapper>
+        </div>
     )
 }));
 
