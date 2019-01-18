@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import Hero from './components/Hero';
+import HomePage from './components/HomePage';
 import styled from 'styled-components';
 import './App.css';
 
@@ -26,6 +27,7 @@ class App extends Component <MyProps, MyState>  {
     return (
       <AppWrapper>
         <Hero />
+        <HomePage />
       </AppWrapper>
     );
   }

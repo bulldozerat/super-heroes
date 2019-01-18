@@ -1,0 +1,44 @@
+let test = [
+    [
+        "spider-man",
+        "Spider-man",
+        "https://purepng.com/public/uploads/large/purepng.com-spiderman-gamespider-manspidermansuperherocomic-bookmarvel-comicscharacterstan-leegamesmovie-1701528655751ss6km.png"
+    ],
+    [
+        "hulk",
+        "Hulk",
+        "https://vignette.wikia.nocookie.net/vsbattles/images/d/d1/Open-uri20150608-27674-1jdbpa8_be64ca1b.png/revision/latest/scale-to-width-down/350?cb=20180604131518"
+    ],
+    [
+        "Venom",
+        "venom",
+        "https://vignette.wikia.nocookie.net/marveldatabase/images/9/9e/Edward_Brock_%28Earth-30847%29_and_Venom_%28Klyntar%29_%28Earth-30847%29_from_Marvel_vs._Capcom_Infinity_0001.png/revision/latest?cb=20171201035703"
+    ],
+    [
+        "Карначе",
+        "carnage",
+        "https://vignette.wikia.nocookie.net/disney/images/4/4f/Carnage.png/revision/latest?cb=20180713040053"
+    ],
+    [
+        "Thanos",
+        "Thanos",
+        "https://i.pinimg.com/originals/4a/ce/db/4acedb8a1ac8106e7a8118a60e8a42cc.png"
+    ],
+    [
+        "Ultron",
+        "Ultron",
+        "https://vignette.wikia.nocookie.net/disney/images/4/48/AoU_Ultron_03.png/revision/latest?cb=20150310154913"
+    ],
+    [
+        "Vision",
+        "Vision",
+        "https://vignette.wikia.nocookie.net/marvelcrossroads/images/0/01/Vizon.png/revision/latest?cb=20170516223951"
+    ],
+    [
+        "Vegeta",
+        "Vegeta",
+        "https://vignette.wikia.nocookie.net/gameideas/images/3/3c/Majin_Vegeta.png/revision/latest?cb=20171115004743"
+    ]
+];
+
+export default test;
