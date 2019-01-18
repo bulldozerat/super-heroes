@@ -7,6 +7,7 @@ import Appearance from './Appearance';
 
 let HeroInfo = (props: any) => {
     const InfoWrapper = styled.div`
+        display: none;
         box-sizing: border-box;
         width:100%;
         background: #F4F6F8;
@@ -19,11 +20,12 @@ let HeroInfo = (props: any) => {
         }
         .info-property {
             font-weight: bold;
+            text-transform: capitalize;
         }
     `;
 
     return (
-        <InfoWrapper>
+        <InfoWrapper className={'InfoWrapper InfoWrapper' + props.order}>
             <Appearance info={props.info.appearance} title="Appearance" margin="0"/>
             <Appearance info={props.info.biography} title="Biography" margin="0"/>
             <Appearance info={props.info.connections} title="Connections" margin="0"/>

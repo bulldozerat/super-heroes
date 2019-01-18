@@ -1,16 +1,16 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import styled from 'styled-components';
 
 interface ButtonProps {
     background: string,
     width: string,
     color: string,
-    text: string,
-    heroId: object,
+    heroClass: string,
+    heroStore?: any
 }
 
-let Button = (props: ButtonProps) => {
+let Button = inject("heroStore")(observer((props: ButtonProps) => {
     const StyledButton = styled.div`
         background: ${props.background || "#0f4191"} ;
         width: ${props.width || "100%"};
@@ -19,14 +19,16 @@ let Button = (props: ButtonProps) => {
         line-height: 38px;
         text-align: center;
         font-weight: bold;
-        border-radius: 25px;
+        border-radius: 10px;
         text-transform: uppercase;
         cursor: pointer;
     `;
 
     return (
-        <StyledButton data-hero-id={props.heroId}>{props.text}</StyledButton>
+        <StyledButton data-hero-class={props.heroClass} onClick={props.heroStore.visibilityInfoSection}>{props.heroStore.characterBtnText}</StyledButton>
     )
-};
+}));
 
-export default observer(Button);
+
+
+export default Button;

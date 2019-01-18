@@ -42,10 +42,10 @@ let Hero = inject("heroStore")(observer((props) => {
                                         )
                                     })
                                 }
-                                <Button text="See more" background="#0f4191" color="#fff" width="200px" heroId={e.id}/>
+                                <Button background="#0f4191" color="#fff" width="400px" heroClass={'InfoWrapper' + (index + 1)}/>
                                 </StatsWrapper>
                             </HeroWrapper>
-                            <HeroInfo info={e}/>
+                            <HeroInfo info={e} order={index + 1}/>
                         </div>
                     )
                 }
