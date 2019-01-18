@@ -19,6 +19,8 @@ let Button = (props: ButtonProps) => {
         line-height: 38px;
         text-align: center;
         font-weight: bold;
+        border-radius: 25px;
+        text-transform: uppercase;
         cursor: pointer;
     `;
 

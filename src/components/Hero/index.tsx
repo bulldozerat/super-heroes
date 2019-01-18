@@ -10,7 +10,6 @@ import HeroInfo from '../HeroInfo';
 const HeroWrapper = styled.div`
     display: flex;
     background: #f4f6f9;
-    margin-bottom: 30px;
     padding: 30px;
     img {
         width: 350px;
@@ -46,7 +45,7 @@ let Hero = inject("heroStore")(observer((props) => {
                                 <Button text="See more" background="#0f4191" color="#fff" width="200px" heroId={e.id}/>
                                 </StatsWrapper>
                             </HeroWrapper>
-                            <HeroInfo order={e}/>
+                            <HeroInfo info={e}/>
                         </div>
                     )
                 }
