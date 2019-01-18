@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import styled from 'styled-components';
-import Appearance from './Appearance';
+import SectionInfo from './SectionInfo';
 
 
 
@@ -11,7 +11,7 @@ let HeroInfo = (props: any) => {
         box-sizing: border-box;
         width:100%;
         background: #F4F6F8;
-        padding: 30px 30px 50px 30px;
+        padding: 1px 30px 50px 30px;
         .info-display {
             display: none;
         }
@@ -26,10 +26,10 @@ let HeroInfo = (props: any) => {
 
     return (
         <InfoWrapper className={'InfoWrapper InfoWrapper' + props.order}>
-            <Appearance info={props.info.appearance} title="Appearance" margin="0"/>
-            <Appearance info={props.info.biography} title="Biography" margin="0"/>
-            <Appearance info={props.info.connections} title="Connections" margin="0"/>
-            <Appearance info={props.info.work} title="Work"/>
+            <SectionInfo info={props.info.appearance} title="Appearance" margin="0"/>
+            <SectionInfo info={props.info.biography} title="Biography" margin="0"/>
+            <SectionInfo info={props.info.connections} title="Connections" margin="0"/>
+            <SectionInfo info={props.info.work} title="Work"/>
         </InfoWrapper>
     )
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import Title from '../../common/Title'
 
-let Appearance = (props) => {
+let SectionInfo = (props) => {
     return (
         <>
         <Title position="left" text={props.title}/>
@@ -17,4 +17,4 @@ let Appearance = (props) => {
     )
 };
 
-export default observer(Appearance);
+export default observer(SectionInfo);

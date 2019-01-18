@@ -18,8 +18,7 @@ export class heroStore {
   @action visibilityInfoSection = (e: any) => {
     const selector = e.target.getAttribute('data-hero-class');
     const targetElement: any = document.getElementsByClassName(selector)[0];
-    let isVisible = targetElement.offsetParent !== null; 
-    console.log(isVisible);
+    const isVisible = targetElement.offsetParent !== null;
     
     if(isVisible){
       targetElement.style.display = "none";
