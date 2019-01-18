@@ -1,19 +1,24 @@
 import React from 'react';
-import { observer, inject } from 'mobx-react';
+import { observer } from 'mobx-react';
 import styled from 'styled-components';
+import Appearance from './Appearance';
 
-const InfoWrapper = styled.div`
-    width:100%;
-    background: red;
-`;
 
-let HeroInfo = inject("heroInfoStore")(observer((props) => {
+
+let HeroInfo = (props: any) => {
+    const InfoWrapper = styled.div`
+        width:100%;
+        background: red;
+        .info-display {
+            display: none;
+        }
+    `;
+
     return (
         <InfoWrapper>
-            {props.heroInfoStore.biography['full-name']}
+            <Appearance info={props.order}/>
         </InfoWrapper>
-        
     )
-}));
+};
 
-export default HeroInfo;
+export default observer(HeroInfo);

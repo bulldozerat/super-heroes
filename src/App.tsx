@@ -11,7 +11,6 @@ const AppWrapper = styled.div`
 
 interface MyProps {
   heroStore?: any,
-  heroInfoStore?: any
 }
 
 interface MyState {}

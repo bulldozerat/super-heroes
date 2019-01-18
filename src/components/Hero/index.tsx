@@ -29,7 +29,7 @@ let Hero = inject("heroStore")(observer((props) => {
     return (
         <>
             {props.heroStore.heroTypes.map(
-                (e: any) => {
+                (e: any, index: number) => {
                     return (
                         <div key={e.id}>
                             <Title text={e.name} position="center"/>
@@ -46,7 +46,7 @@ let Hero = inject("heroStore")(observer((props) => {
                                 <Button text="See more" background="#0f4191" color="#fff" width="200px" heroId={e.id}/>
                                 </StatsWrapper>
                             </HeroWrapper>
-                            <HeroInfo />
+                            <HeroInfo order={e}/>
                         </div>
                     )
                 }

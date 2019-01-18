@@ -1,10 +1,10 @@
 import React from 'react';
-import { observer, inject } from 'mobx-react';
+import { observer } from 'mobx-react';
 
-let Biography = inject("heroInfoStore")(observer((props) => {
+let Biography = (props: any) => {
     return (
         <h1>Biography</h1>
     )
-}));
+};
 
-export default Biography;
+export default observer(Biography);

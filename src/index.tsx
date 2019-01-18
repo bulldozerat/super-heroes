@@ -8,11 +8,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import heroStore from './store/heroStore';
-import heroInfoStore from './store/heroInfoStore'
 
 const stores = {
   heroStore,
-  heroInfoStore
 };
 
 ReactDOM.render(

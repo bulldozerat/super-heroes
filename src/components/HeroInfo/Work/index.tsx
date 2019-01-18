@@ -1,10 +1,10 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 
-let Work = inject("heroInfoStore")(observer((props) => {
+let Work = (props: any) => {
     return (
         <h1>Work</h1>
     )
-}));
+};
 
-export default Work;
+export default observer(Work);
