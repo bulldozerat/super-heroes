@@ -34,6 +34,12 @@ let HeroStats = inject("heroStore")(observer((props) => {
         text-transform: uppercase;
         color: #fff;
         font-weight: bold;
+        animation-name: example;
+        animation-duration: 1s;
+        @keyframes example {
+            0%   {width: 1%;}
+            100% {width: ${props.value};}
+        }
     `;
 
     return (
