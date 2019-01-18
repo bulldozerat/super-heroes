@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import Title from '../../common/Title'
+import Title from '../../../common/Title';
 
 let SectionInfo = (props) => {
     return (

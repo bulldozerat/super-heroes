@@ -1,11 +1,11 @@
 import React from "react";
 import { inject, observer } from 'mobx-react';
-import HeroImage from '../HeroImage';
+import HeroImage from './HeroImage';
 import styled from 'styled-components';
 import Title from '../common/Title';
-import HeroStats from '../HeroStats';
-import Button from '../common/Button';
-import HeroInfo from '../HeroInfo';
+import HeroStatsBar from './HeroStatsBar';
+import Button from './Button';
+import HeroInfo from './HeroInfo';
 
 const HeroWrapper = styled.div`
     display: flex;
@@ -38,7 +38,7 @@ let Hero = inject("heroStore")(observer((props) => {
                                 {
                                     Object.keys(e.powerstats).map(function(key) {
                                         return (
-                                            <HeroStats nameOfPowerStat={key} value={e.powerstats[key]} key={Math.random()}/>
+                                            <HeroStatsBar nameOfPowerStat={key} value={e.powerstats[key]} key={Math.random()}/>
                                         )
                                     })
                                 }

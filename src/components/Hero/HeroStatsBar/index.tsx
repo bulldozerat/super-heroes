@@ -19,7 +19,7 @@ let getColor = (namePower: string): string => {
     return "gray";
 };
 
-let HeroStats = inject("heroStore")(observer((props) => {
+let HeroStatsBar = inject("heroStore")(observer((props) => {
     let color = getColor(props.nameOfPowerStat);
 
     const HeroWrapper = styled.div`
@@ -49,4 +49,4 @@ let HeroStats = inject("heroStore")(observer((props) => {
     )
 }));
 
-export default HeroStats;
+export default HeroStatsBar;
