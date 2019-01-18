@@ -12,7 +12,6 @@ export class heroStore {
 
     this.heroData = data;
     this.heroTypes = data.results;
-    console.log(data.results);
   }
 }
 

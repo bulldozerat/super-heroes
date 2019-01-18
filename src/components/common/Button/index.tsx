@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react';
+import { observer, inject } from 'mobx-react';
 import styled from 'styled-components';
 
 interface ButtonProps {
@@ -7,10 +7,11 @@ interface ButtonProps {
     width: string,
     color: string,
     text: string,
-    heroId: object
+    heroId: object,
+    heroInfoStore?: any
 }
 
-let Button = (props: ButtonProps) => {
+let Button = inject("heroInfoStore")(observer((props: ButtonProps) => {
     const StyledButton = styled.div`
         background: ${props.background || "#0f4191"} ;
         width: ${props.width || "100%"};
@@ -23,8 +24,8 @@ let Button = (props: ButtonProps) => {
     `;
 
     return (
-        <StyledButton>{props.text || "Pass text prop"}</StyledButton>
+        <StyledButton onClick={props.heroInfoStore.fetchOneByIdHero} data-hero-id={props.heroId}>{props.text}</StyledButton>
     )
-}
+}));
 
-export default observer(Button);
+export default Button;

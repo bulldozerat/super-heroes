@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Title from '../common/Title';
 import HeroStats from '../HeroStats';
 import Button from '../common/Button';
+import HeroInfo from '../HeroInfo';
 
 const HeroWrapper = styled.div`
     display: flex;
@@ -45,6 +46,7 @@ let Hero = inject("heroStore")(observer((props) => {
                                 <Button text="See more" background="#0f4191" color="#fff" width="200px" heroId={e.id}/>
                                 </StatsWrapper>
                             </HeroWrapper>
+                            <HeroInfo />
                         </div>
                     )
                 }
