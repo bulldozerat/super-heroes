@@ -20,7 +20,7 @@ interface MyState {}
 class App extends Component <MyProps, MyState>  {
 
   componentDidMount() {
-    this.props.heroStore.fetchHero();
+    //this.props.heroStore.fetchHero();
   }
 
   render() {

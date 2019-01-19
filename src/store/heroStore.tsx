@@ -7,12 +7,17 @@ export class heroStore {
 
   APIkey: string = "2481591191854227";
   
-  @action fetchHero = async () => {
-    const response = await fetch(`https://superheroapi.com/api.php/${this.APIkey}/search/One Punch Man`);
+  @action fetchHero = async (e: any) => {
+    const searchName = e.target.getAttribute("data-name");
+    
+    const response = await fetch(`https://superheroapi.com/api.php/${this.APIkey}/search/${searchName}`);
     const data = await response.json();
 
     this.heroData = data;
     this.heroTypes = data.results;
+
+    this.characterBtnText = "See more about this character";
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   @action visibilityInfoSection = (e: any) => {

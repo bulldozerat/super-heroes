@@ -30,9 +30,9 @@ let test = [
         "https://vignette.wikia.nocookie.net/disney/images/4/48/AoU_Ultron_03.png/revision/latest?cb=20150310154913"
     ],
     [
-        "Vision",
-        "Vision",
-        "https://vignette.wikia.nocookie.net/marvelcrossroads/images/0/01/Vizon.png/revision/latest?cb=20170516223951"
+        "Superman",
+        "superman",
+        "https://superhero-martialarts.com/wp-content/uploads/2016/03/Superman-PNG-Transparent-Image-2.png"
     ],
     [
         "Vegeta",
