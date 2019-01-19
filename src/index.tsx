@@ -8,9 +8,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import heroStore from './store/heroStore';
+import displayStore from './store/displayStore';
 
 const stores = {
   heroStore,
+  displayStore
 };
 
 ReactDOM.render(

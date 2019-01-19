@@ -3,8 +3,6 @@ import { inject, observer } from 'mobx-react';
 import styled from 'styled-components';
 import listCharacters from '../../util/listCharacters';
 
-
-
 let HeroBadges = inject("heroStore")(observer((props: any) => {
     const BadgesWrapper = styled.div`
         box-sizing: border-box;
@@ -15,6 +13,7 @@ let HeroBadges = inject("heroStore")(observer((props: any) => {
         .badge {
             flex-grow: 1;
             width: 16%;
+            max-width: 226px;
             margin: 2%;
             background: skyblue;
             padding: 7px;

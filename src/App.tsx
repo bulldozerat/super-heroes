@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import HomePage from './components/HomePage';
 import styled from 'styled-components';
@@ -12,7 +13,8 @@ const AppWrapper = styled.div`
 `;
 
 interface MyProps {
-  heroStore?: any,
+  heroStore?: any, 
+  displayStore?: any
 }
 
 interface MyState {}
@@ -27,6 +29,7 @@ class App extends Component <MyProps, MyState>  {
   render() {
     return (
       <AppWrapper>
+        <Navigation />
         <Hero />
         <HomePage />
         <HeroBadges />
