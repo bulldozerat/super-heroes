@@ -1,4 +1,4 @@
-	let string = `A-Bomb,
+	let listCharacters = `A-Bomb,
 	Abe Sapien,
 	Abin Sur,
 	Abomination,
@@ -636,4 +636,4 @@
 	Zatanna,
 	Zoom`;
 
-	export default string;
+	export default listCharacters;

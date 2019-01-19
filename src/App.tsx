@@ -3,6 +3,7 @@ import { inject, observer } from 'mobx-react';
 import Hero from './components/Hero';
 import HomePage from './components/HomePage';
 import styled from 'styled-components';
+import HeroBadges from './components/HeroBadges';
 import './App.css';
 
 const AppWrapper = styled.div`
@@ -28,6 +29,7 @@ class App extends Component <MyProps, MyState>  {
       <AppWrapper>
         <Hero />
         <HomePage />
+        <HeroBadges />
       </AppWrapper>
     );
   }
