@@ -3,7 +3,7 @@ import { inject, observer } from 'mobx-react';
 import styled from 'styled-components';
 import listCharacters from '../../util/listCharacters';
 
-let HeroBadges = inject("heroStore")(observer((props: any) => {
+let HeroBadges = inject("heroStore" , "displayStore")(observer((props: any) => {
     const BadgesWrapper = styled.div`
         box-sizing: border-box;
         width: 100%;
@@ -26,9 +26,12 @@ let HeroBadges = inject("heroStore")(observer((props: any) => {
         }
     `;
     
+    let utilHeroArr = listCharacters.split(",");
+    let heroesArray = props.displayStore.heroesArray || utilHeroArr;
+
     return (
         <BadgesWrapper>
-            {listCharacters.split(",").map(
+            {heroesArray.map(
                 (e: any, index: number) => {
                     return(
                         <div 

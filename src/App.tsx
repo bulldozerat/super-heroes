@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import HomePage from './components/HomePage';
 import styled from 'styled-components';
 import HeroBadges from './components/HeroBadges';
+import Search from './components/Search';
 import './App.css';
 
 const AppWrapper = styled.div`
@@ -30,6 +31,7 @@ class App extends Component <MyProps, MyState>  {
     return (
       <AppWrapper>
         <Navigation />
+        <Search />
         <Hero />
         <HomePage />
         <HeroBadges />
