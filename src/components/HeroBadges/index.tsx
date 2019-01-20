@@ -5,17 +5,18 @@ import listCharacters from '../../util/listCharacters';
 
 let HeroBadges = inject("heroStore" , "displayStore")(observer((props: any) => {
     const BadgesWrapper = styled.div`
+        display: ${props.displayStore.allHeroesPage};
         box-sizing: border-box;
         width: 100%;
-        display: flex;
         flex-wrap: wrap;
-        margin-top: 30px;
+        padding-top: 30px;
+        background: #f4f6f9;
         .badge {
             flex-grow: 1;
             width: 16%;
             max-width: 226px;
             margin: 2%;
-            background: skyblue;
+            background: #517abc;
             padding: 7px;
             color: #fff;
             text-align: center;
@@ -45,7 +46,6 @@ let HeroBadges = inject("heroStore" , "displayStore")(observer((props: any) => {
                     )
                 }
             )}
-            {/* <div className="badge">Test</div> */}
         </BadgesWrapper>
     )
 }));

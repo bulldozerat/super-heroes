@@ -1,24 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../common/Title';
 import HpHero from './HpHero';
+import { inject, observer } from 'mobx-react';
 
-const HomePageWrapper = styled.div`
-    box-sizing: border-box;
-    padding: 30px;
-    background: #f4f6f9;
-    width: 100%;
-`;
 
-let HomePage = (props: any) => {
+
+let HomePage = inject("displayStore")(observer((props: any) => {
+    const HomePageWrapper = styled.div`
+        display: ${props.displayStore.homePage};
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 30px;
+        background: #f4f6f9;
+        width: 100%;
+    `;
+
     return (
         <HomePageWrapper>
-            <Title position="center" text="Home Page"/>
-            <div style={{display: 'flex', flexWrap: 'wrap'}}>
-                <HpHero />
-            </div>
+            <HpHero />
         </HomePageWrapper>
     )
-}
+}));
 
 export default HomePage;

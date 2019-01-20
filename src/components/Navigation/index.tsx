@@ -30,9 +30,9 @@ const Nav = styled.nav`
 let Navigation = inject("displayStore")(observer((props: any) => {
     return(
         <Nav>
-            <div className="nav-btn nav-active">Home</div>
-            <div className="nav-btn nav-middle">See all heroes</div>
-            <div className="nav-btn">Search for heroes</div>
+            <div className="nav-btn nav-active" data-order="1" onClick={props.displayStore.navLogic}>Home</div>
+            <div className="nav-btn nav-middle" data-order="2" onClick={props.displayStore.navLogic}>See all heroes</div>
+            <div className="nav-btn" data-order="3" onClick={props.displayStore.navLogic}>Search for heroes</div>
         </Nav>
         
     )
