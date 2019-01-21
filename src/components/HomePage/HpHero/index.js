@@ -11,6 +11,7 @@ const HpHeroWrapper = styled.div`
     position: relative;
     img {
         width: 100%;
+        cursor: pointer;
     }
 `;
 

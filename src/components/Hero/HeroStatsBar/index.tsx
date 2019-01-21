@@ -28,6 +28,7 @@ let HeroStatsBar = inject("heroStore")(observer((props: HeroStatsBarProps) => {
     let color = getColor(props.nameOfPowerStat);
 
     const HeroWrapper = styled.div`
+        box-sizing: border-box;
         display: block;
         font-size: 12px;
         width: ${props.value}%;
@@ -48,7 +49,7 @@ let HeroStatsBar = inject("heroStore")(observer((props: HeroStatsBarProps) => {
     `;
 
     return (
-        <div style={{width: '100%'}}>
+        <div style={{width: '100%', height: '40px', borderRadius: '25px', background: "#fff", border: `2px solid ${color}`}}>
             <HeroWrapper>{props.nameOfPowerStat}: {props.value === "null" ? "unknown" : props.value}</HeroWrapper>
         </div>
     )

@@ -1,7 +1,6 @@
 import React from "react";
 
 interface TitleProps {
-    //???
     position: any,
     text: string,
 }
