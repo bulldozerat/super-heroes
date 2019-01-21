@@ -3,9 +3,9 @@ import { inject, observer } from 'mobx-react';
 import styled from 'styled-components';
 import listCharacters from '../../util/listCharacters';
 
-let HeroBadges = inject("heroStore" , "displayStore")(observer((props: any) => {
+const HeroBadges = inject("heroStore" , "displayStore")(observer((props: any) => {
     const BadgesWrapper = styled.div`
-        display: ${props.displayStore.allHeroesPage};
+        display: flex;
         box-sizing: border-box;
         width: 100%;
         flex-wrap: wrap;

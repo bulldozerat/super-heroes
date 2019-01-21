@@ -2,12 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import HpHero from './HpHero';
 import { inject, observer } from 'mobx-react';
-
-
+import Hero from '../Hero';
 
 let HomePage = inject("displayStore")(observer((props: any) => {
     const HomePageWrapper = styled.div`
-        display: ${props.displayStore.homePage};
+        display: flex;
         flex-wrap: wrap;
         box-sizing: border-box;
         padding: 30px;
@@ -16,9 +15,12 @@ let HomePage = inject("displayStore")(observer((props: any) => {
     `;
 
     return (
-        <HomePageWrapper>
-            <HpHero />
-        </HomePageWrapper>
+        <>
+            <Hero/>
+            <HomePageWrapper>
+                <HpHero />
+            </HomePageWrapper>
+        </>
     )
 }));
 

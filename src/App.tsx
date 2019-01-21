@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import Navigation from './components/Navigation';
-import Hero from './components/Hero';
 import HomePage from './components/HomePage';
 import styled from 'styled-components';
-import HeroBadges from './components/HeroBadges';
+import HeroBadgesWrapper from './components/HeroBadgesWrapper';
 import Search from './components/Search';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 const AppWrapper = styled.div`
@@ -31,10 +31,9 @@ class App extends Component <MyProps, MyState>  {
     return (
       <AppWrapper>
         <Navigation />
-        <Search />
-        <Hero />
-        <HomePage />
-        <HeroBadges />
+        <Route path="/search-characters" component={Search} />
+        <Route exact path="/home" component={HomePage} />
+        <Route path="/all-characters" component={HeroBadgesWrapper} />
       </AppWrapper>
     );
   }

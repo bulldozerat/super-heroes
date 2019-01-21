@@ -6,6 +6,7 @@ import { Provider } from 'mobx-react';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from "react-router-dom";
 
 import heroStore from './store/heroStore';
 import displayStore from './store/displayStore';
@@ -16,9 +17,11 @@ const stores = {
 };
 
 ReactDOM.render(
-  <Provider {...stores}>
-    <App />
-  </Provider>
+  <BrowserRouter>
+    <Provider {...stores}>
+      <App />
+    </Provider>
+  </BrowserRouter>
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

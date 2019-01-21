@@ -34,6 +34,10 @@ export class heroStore {
     }
     
   }
+
+  @action hideHero = () => { 
+    this.heroTypes = [];
+  }
 }
 
 export default new heroStore();

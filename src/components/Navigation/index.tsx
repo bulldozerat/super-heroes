@@ -1,6 +1,7 @@
 import React from "react";
 import { inject, observer } from 'mobx-react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
     background: #46546b;
@@ -26,13 +27,26 @@ const Nav = styled.nav`
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
     }
+    a{ 
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
 `;
-let Navigation = inject("displayStore")(observer((props: any) => {
+let Navigation = inject("heroStore")(observer((props: any) => {
     return(
         <Nav>
-            <div className="nav-btn nav-active" data-order="1" onClick={props.displayStore.navLogic}>Home</div>
-            <div className="nav-btn nav-middle" data-order="2" onClick={props.displayStore.navLogic}>See all heroes</div>
-            <div className="nav-btn" data-order="3" onClick={props.displayStore.navLogic}>Search for heroes</div>
+            <div className="nav-btn nav-active" data-order="1" onClick={props.heroStore.hideHero}>
+                <Link to="/home">Home</Link>
+            </div>
+            <div className="nav-btn nav-middle" data-order="2" onClick={props.heroStore.hideHero}>
+                <Link to="/all-characters">See all heroes</Link>
+            </div>
+            <div className="nav-btn" data-order="3" onClick={props.heroStore.hideHero}>
+                <Link to="/search-characters">Search for heroes</Link>
+            </div>
         </Nav>
         
     )

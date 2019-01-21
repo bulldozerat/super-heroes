@@ -1,10 +1,11 @@
 import React from "react";
 import { inject, observer } from 'mobx-react';
 import styled from 'styled-components';
+import Hero from '../Hero';
+import HeroBadges from '../HeroBadges';
 
 let Search = inject("displayStore")(observer((props: any) => {
     const SearchWrapper = styled.div`
-    display: ${props.displayStore.searchPage};
         width: 100%;
         text-align: center;
         padding: 50px 0 20px;
@@ -25,9 +26,13 @@ let Search = inject("displayStore")(observer((props: any) => {
     `;
 
     return(
-        <SearchWrapper>
-            <input type="text" placeholder="Seach for heroes" onChange={props.displayStore.searchHeroes}/>
-        </SearchWrapper>
+        <>
+            <SearchWrapper>
+                <input type="text" placeholder="Seach for heroes" onChange={props.displayStore.searchHeroes}/>
+            </SearchWrapper>
+            <Hero />
+            <HeroBadges />
+        </>
     )
 }));
 
