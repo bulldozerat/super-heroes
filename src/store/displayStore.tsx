@@ -26,9 +26,10 @@ export class displayStore {
     }
 
     @action activeNavButton = (e: any) => {
+        this.heroesArray = null;
         const navBtns: any = document.getElementsByClassName("nav-btn");
         for (let item of navBtns) {
-                item.style.background = "#46546b";
+            item.style.background = "#46546b";
         }
         
         e.target.style.background = "#000";
