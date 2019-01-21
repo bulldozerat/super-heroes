@@ -24,6 +24,20 @@ export class displayStore {
         
         this.heroesArray = matches;
     }
+
+    @action activeNavButton = (e: any) => {
+        const navBtns: any = document.getElementsByClassName("nav-btn");
+        for (let item of navBtns) {
+                item.style.background = "#46546b";
+        }
+
+        e.target.style.background = "#000";
+
+        console.log(123);
+        console.log(e.target);
+        
+        
+    }
 }
 
 export default new displayStore();
