@@ -3,7 +3,7 @@ import listCharacters from '../util/listCharacters';
 import heroStore from './heroStore';
 
 export class displayStore {
-    @observable heroesArray: any = null;
+    @observable heroesArray: string[] | null = null;
 
     @action searchHeroes = (e: any) => {
         heroStore.hideHero();
@@ -30,13 +30,8 @@ export class displayStore {
         for (let item of navBtns) {
                 item.style.background = "#46546b";
         }
-
+        
         e.target.style.background = "#000";
-
-        console.log(123);
-        console.log(e.target);
-        
-        
     }
 }
 

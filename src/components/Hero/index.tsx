@@ -24,7 +24,11 @@ const StatsWrapper = styled.div`
     margin-left: 20px;
 `;
 
-let Hero = inject("heroStore")(observer((props) => {
+interface HeroProps {
+    heroStore?: any
+}
+
+let Hero = inject("heroStore")(observer((props: HeroProps) => {
     return (
         <>
             {props.heroStore.heroTypes.map(

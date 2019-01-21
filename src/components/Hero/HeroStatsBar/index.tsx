@@ -19,7 +19,12 @@ let getColor = (namePower: string): string => {
     return "gray";
 };
 
-let HeroStatsBar = inject("heroStore")(observer((props) => {
+interface HeroStatsBarProps {
+    nameOfPowerStat: string,
+    value: string
+}
+
+let HeroStatsBar = inject("heroStore")(observer((props: HeroStatsBarProps) => {
     let color = getColor(props.nameOfPowerStat);
 
     const HeroWrapper = styled.div`

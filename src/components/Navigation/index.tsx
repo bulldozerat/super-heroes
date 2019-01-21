@@ -30,16 +30,21 @@ const Nav = styled.nav`
     }
 `;
 
-let Navigation = inject("heroStore", "displayStore")(observer((props: any) => {
+interface NavigationProps {
+    heroStore?: any,
+    displayStore?: any
+}
+
+let Navigation = inject("heroStore", "displayStore")(observer((props: NavigationProps) => {
     
-    let callStore = (e: any) => {
+    let callStore = (e: object) => {
         props.heroStore.hideHero();
         props.displayStore.activeNavButton(e);
     }
 
     return(
         <Nav>
-            <Link to="/home" className="nav-btn nav-active" onClick={callStore}>Home</Link>
+            <Link to="/home" className="nav-btn" onClick={callStore}>Home</Link>
             <Link to="/all-characters" className="nav-btn nav-middle" onClick={callStore}>See all heroes</Link>
             <Link to="/search-characters" className="nav-btn" onClick={callStore}>Search for heroes</Link>
         </Nav>
